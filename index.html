@@ -1,19 +1,19 @@
 ---
 layout: workshop
 root: .
-venue: FIXME (brief name of host site)
-address: FIXME (street address of workshop location)
-country: FIXME (country (hyphenated if need be, like 'United-Kingdom')
-latlng: FIXME (fractional latitude and longitude like 41.7901128,-87.6007318)
-humandate: FIXME (use the format 'Feb 17-18, 2020' (without the quotes)
-humantime: FIXME (use the format '9:00 am - 4:30 pm' (without the quotes)
-startdate: FIXME (use YYYY-MM-DD format like 2015-01-01)
-enddate: FIXME (use YYYY-MM-DD format like 2015-01-02)
-instructor: FIXME (list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"])
-helper: FIXME (list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"])
-contact: FIXME (contact email address for workshop organizer)
-etherpad: # FIXME (insert the URL for your Etherpad if you're using one)
-eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 1234567890AB key for Eventbrite registration)
+venue: Old Arts Collaborative Learning Space 3
+address: <a href="http://maps.unimelb.edu.au/parkville/building/149">Level 2, Old Arts, The University of Melbourne, Parkville, 3010</a>
+country: Australia
+latlng: -37.797985,144.96002
+humandate: Dec 8-9, 2014
+humantime: 9:00 am - 4:30 pm
+startdate: 2014-12-08
+enddate: 2014-12-09
+instructor: ["Scott Ritchie"]
+helper: ["Andrew Lonsdale", "Harriet Dashnow", "Timothy Rice", "Noel Faux"] 
+contact: scottcr@unimelb.edu.au
+etherpad: https://etherpad.mozilla.org/2014-12-08-combine-r
+eventbrite: # 
 ---
 <!--
   Edit the values in the block above to be appropriate for your
@@ -44,14 +44,29 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   the pitch.
 -->
 <p>
-  <a href="{{site.swc_site}}">Software Carpentry</a>'s mission
-  is to help scientists and engineers get more research done in less
-  time and with less pain by teaching them basic lab skills for
-  scientific computing.  This hands-on workshop will cover basic
-  concepts and tools, including program design, version control, data
-  management, and task automation.  Participants will be encouraged to
+  Researchers spend much of their time wrestling with software, but most
+  are self-taught programmers. As a result, they spend hours doing things that
+  should take minutes, reinvent a lot of wheels, and still don't know if their
+  results are reliable. To tackle this problem, an international volunteer organisation
+  known as <a href="{{site.swc_site}}">Software Carpentry</a> has been
+  running <a href="{{site.swc_site}}/bootcamps/">bootcamps</a> for a number 
+  of years now, teaching basic lab skills for computing like program design, version 
+  control, data management and task automation. Participants will be encouraged to
   help one another and to apply what they have learned to their own
   research problems.
+</p>
+
+<p>
+  With support from the
+  <a href="https://its.unimelb.edu.au/research">ITS Research Services</a> department at 
+  The University of Melbourne, the 
+  <a href="http://resbaz.tumblr.com/about">Research Bazaar</a> project has
+  been running and supporting Software Carpentry bootcamps around Australia since 2013.
+  For this particular bootcamp we are teaming up with
+  <a href="http://combine.org.au/">COMBINE</a>, the national student
+  group for students and early career researchers in bioinformatics and
+  computational biology, although there are places available for researchers who aren't 
+  members of COMBINE.
 </p>
 
 <!--
@@ -60,7 +75,11 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 -->
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  This bootcamp is open to postgraduate students, post-docs and other researchers who have a basic  
+  familiarity with programming concepts like variables and tabular data, but want to learn how to
+  use R, and learn the basic practices in scientific computing to help them work more productively.
+  While the bootcamp is being hosted at the University of Melbourne in conjunction with
+  COMBINE, people from other research institutions and disciplines are welcome. 
 </p>
 
 <!--
@@ -72,11 +91,8 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 {% if page.latlng %}
 <p>
   <strong>Where:</strong>
-  {{page.address}}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
+  Collaborative Learning Space 3, <a href="http://maps.unimelb.edu.au/parkville/building/149">Old Arts Building</a>,
+  University of Melbourne.
 </p>
 {% endif %}
 
@@ -84,11 +100,13 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   Modify the block below if there are any special requirements.
 -->
 <p>
-  <strong>Requirements:</strong> Participants must bring a laptop with
-  a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
-  Software Carpentry's
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  <strong>Requirements:</strong>
+  Participants are asked to bring their laptop. They will be given access to the 
+  <a href="https://its.unimelb.edu.au/research/our_services/cloud_computing/research_cloud">NeCTAR Research Cloud</a> 
+  for the duration of the bootcamp (and beyond), so it's critical that this laptop is able
+  to connect to either the UniWireless or Eduroam wifi networks. Since the NeCTAR Research Cloud has all the required 
+  software installed, participants are not required to install any software on their own laptop prior to the bootcamp. 
+  If you don't have a laptop, that's completely fine. We'll pair you up with someone who does.
 </p>
 
 <!--
@@ -118,25 +136,29 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 
 <div class="row-fluid">
   <div class="span6">
-    <h3>Day 1</h3>
+    <h3>Monday December 8th</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>09:00 - 10:15</td>  <td>Introduction to R + RStudio</td> </tr>
+      <tr> <td>10:15 - 10:45</td>  <td><em>Tea &amp; Coffee</em></td> </tr>
+      <tr> <td>10:45 - 12:00</td>  <td>Functions</td> </tr>
+      <tr> <td>12:00 - 12:30</td>  <td>Project Setup</td> </tr>
+      <tr> <td>12:30 - 13:30</td>  <td><em>Lunch break</em></td> </tr>
+      <tr> <td>13:30 - 14:00</td>  <td>Control flow (Conditional Statements)</td> </tr>
+      <tr> <td>14:00 - 15:00</td>  <td>Control flow (loops)</td> </tr>
+      <tr> <td>15:00 - 15:30</td>  <td><em>Tea &amp; Coffee</em></td> </tr>
+      <tr> <td>15:30 - 16:30</td>  <td>Split-apply-combine</td> </tr>
+      <tr> <td>16:30 - 17:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
   <div class="span6">
-    <h3>Day 2</h3>
+    <h3>Tuesday December 9th</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>09:00 - 10:30</td>  <td>Introduction to Shell</td> </tr>
+      <tr> <td>10:15 - 10:45</td>  <td><em>Tea &amp; Coffee</em></td> </tr>
+      <tr> <td>12:30 - 13:30</td>  <td><em>Lunch break</em></td> </tr>
+      <tr> <td>13:30 - 15:00</td>  <td>Introduction to Git and Version Control</td> </tr>
+      <tr> <td>15:00 - 15:30</td>  <td><em>Tea &amp; Coffee</em></td> </tr>
+      <tr> <td>16:30 - 17:00</td>  <td>Wrap-up</td> </tr>
     </table>
   </div>
 </div>
@@ -176,81 +198,6 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   please preview your site before committing, and make sure to run
   'tools/check' as well.
 -->
-<h2>Syllabus</h2>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h3>The Unix Shell</h3>
-    <ul>
-      <li>Files and directories</li>
-      <li>History and tab completion</li>
-      <li>Pipes and redirection</li>
-      <li>Looping over files</li>
-      <li>Creating and running shell scripts</li>
-      <li>Finding things</li>
-      <li><a href="{{site.swc_lessons}}/ref/01-shell.html">Reference...</a></li>
-    </ul>
-  </div>
-  <div class="span6">
-    <h3>Programming in Python</h3>
-    <ul>
-      <li>Using libraries</li>
-      <li>Working with arrays</li>
-      <li>Reading and plotting data</li>
-      <li>Creating and using functions</li>
-      <li>Loops and conditionals</li>
-      <li>Defensive programming</li>
-      <li>Using Python from the command line</li>
-      <li><a href="{{site.swc_lessons}}/ref/03-python.html">Reference...</a></li>
-    </ul>
-  </div>
-  <!-- 
-  <div class="span6">
-    <h3>Programming in R</h3>
-    <ul>
-      <li>Working with vectors and data frames</li>
-      <li>Reading and plotting data</li>
-      <li>Creating and using functions</li>
-      <li>Loops and conditionals</li>
-      <li>Using R from the command line</li>
-      <li><a href="{{site.swc_lessons}}/ref/06-R.html">Reference...</a></li>
-    </ul>
-  </div>
-  -->
-</div>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h3>Version Control with Git</h3>
-    <ul>
-      <li>Creating a repository</li>
-      <li>Recording changes to files: <code>add</code>, <code>commit</code>, ...</li>
-      <li>Viewing changes: <code>status</code>, <code>diff</code>, ...</li>
-      <li>Ignoring files</li>
-      <li>Working on the web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
-      <li>Resolving conflicts</li>
-      <li>Open licenses</li>
-      <li>Where to host work, and why</li>
-      <li><a href="{{site.swc_lessons}}/ref/02-git.html">Reference...</a></li>
-    </ul>
-  </div>
-  <div class="span6">
-    <h3>Managing Data with SQL</h3>
-    <ul>
-      <li>Reading and sorting data</li>
-      <li>Filtering with <code>where</code></li>
-      <li>Calculating new values on the fly</li>
-      <li>Handling missing values</li>
-      <li>Combining values using aggregation</li>
-      <li>Combining information from multiple tables using <code>join</code></li>
-      <li>Creating, modifying, and deleting data</li>
-      <li>Programming with databases</li>
-      <li><a href="{{site.swc_lessons}}/ref/04-sql.html">Reference...</a></li>
-    </ul>
-  </div>
-</div>
-
-<hr/>
 
 <!--
   Delete irrelevant sections from the setup instructions.  Each
@@ -264,57 +211,72 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 
 <h2 id="setup">Setup</h2>
 
-<div> <!-- Start of 'editor' section. -->
-  <h3>Text Editor</h3>
+<p>
+  Prior to the bootcamp, University of Melbourne staff/students should ensure that their laptop can connect
+  to UniWireless. Instructions on how to do this and where to get assistance can be found 
+  <a href="https://its.unimelb.edu.au/help/networks-access/networks-internet/connect-wireless/unimelb">here</a>.
+  Attendees from other Australian universities should find out (from the IT website of 
+  their home institution) how to connect to the Eduroam wireless network.
+</p>
+<p>
+  Since the bootcamp will be conducted on the NeCTAR Research Cloud, participants are not required to
+  install any software prior to the bootcamp. For those people who'd like to install
+  the software used in the bootcamp on their own machine for use after the bootcamp, we've included the 
+  relevant installation instructions below (and we're happy to provide assistance with this during the bootcamp). 
+</p>
+
+<h2 id="optional">Optional Software Installation</h2>
+<p>
+  At the end of the bootcamp you may wish to install the software covered 
+  on your laptop or on your lab machine later. We've included an overview of
+  the software as well as installation instructions below.
+</p>
+<hr />
+<div> <!-- Start of 'R' section. -->
+  <h3>R</h3>
 
   <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on Mac OS X and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by ':q!' (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
+    <a href="http://www.r-project.org">R</a> is a programming language
+    that is especially powerful for data exploration, visualization, and
+    statistical analysis. To interact with R, we use
+    <a href="http://www.rstudio.com/">RStudio</a>.
   </p>
 
   <div class="row-fluid">
     <div class="span4">
       <h4>Windows</h4>
       <p>
-	<code>nano</code> is the editor installed by the Software
-	Carpentry Installer, it is a basic editor integrated into the
-	lesson material.
-      </p>
-      <p>
-	<a href="http://notepad-plus-plus.org/">Notepad++</a> is a
-	popular free code editor for Windows.  Be aware that you must
-	add its installation directory to your system path in order to
-	launch it from the command line (or have other tools like Git
-	launch it for you).  Please ask your instructor to help you do
-	this.
+	Install R by downloading and running
+	<a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
+	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
+	Also, please install the
+	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
       </p>
     </div>
     <div class="span4">
       <h4>Mac OS X</h4>
       <p>
-	We recommend
-	<a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-	<a href="http://www.sublimetext.com/">Sublime Text</a>.
-	In a pinch, you can use <code>nano</code>,
-	which should be pre-installed.
+	Install R by downloading and running
+	<a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
+	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
+	Also, please install the
+	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
       </p>
     </div>
     <div class="span4">
       <h4>Linux</h4>
       <p>
-	<a href="http://kate-editor.org/">Kate</a> is one option for
-	Linux users.  In a pinch, you can use <code>nano</code>, which
-	should be pre-installed.
+	You can download the binary files for your distribution
+	from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
+	you can use your package manager (e.g. for Debian/Ubuntu
+	run <code>sudo apt-get install r-base</code> and for Fedora run
+        <code>sudo yum install R</code>).  Also, please install the
+	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
       </p>
     </div>
   </div>
-</div> <!-- End of 'editor' section. -->
-
+</div> <!-- End of 'R' section. -->
+<hr />
 <div> <!-- Start of 'shell' section. -->
   <h3>The Bash Shell</h3>
 
@@ -369,7 +331,58 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
     </div>
   </div>
 <div> <!-- End of 'shell' section. -->  
+  <hr />
+<div> <!-- Start of 'editor' section. -->
+  <h3>Text Editor</h3>
 
+  <p>
+    When you're writing code, it's nice to have a text editor that is
+    optimized for writing code, with features like automatic
+    color-coding of key words.  The default text editor on Mac OS X and
+    Linux is usually set to Vim, which is not famous for being
+    intuitive.  if you accidentally find yourself stuck in it, try
+    typing the escape key, followed by ':q!' (colon, lower-case 'q',
+    exclamation mark), then hitting Return to return to the shell.
+  </p>
+
+  <div class="row-fluid">
+    <div class="span4">
+      <h4>Windows</h4>
+      <p>
+	<code>nano</code> is the editor installed by the Software
+	Carpentry Installer, it is a basic editor integrated into the
+	lesson material.
+      </p>
+      <p>
+	<a href="http://notepad-plus-plus.org/">Notepad++</a> is a
+	popular free code editor for Windows.  Be aware that you must
+	add its installation directory to your system path in order to
+	launch it from the command line (or have other tools like Git
+	launch it for you).  Please ask your instructor to help you do
+	this.
+      </p>
+    </div>
+    <div class="span4">
+      <h4>Mac OS X</h4>
+      <p>
+	We recommend
+	<a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
+	<a href="http://www.sublimetext.com/">Sublime Text</a>.
+	In a pinch, you can use <code>nano</code>,
+	which should be pre-installed.
+      </p>
+    </div>
+    <div class="span4">
+      <h4>Linux</h4>
+      <p>
+	<a href="http://kate-editor.org/">Kate</a> is one option for
+	Linux users.  In a pinch, you can use <code>nano</code>, which
+	should be pre-installed.
+      </p>
+    </div>
+  </div>
+</div> <!-- End of 'editor' section. -->
+<hr />
 <div> <!-- Start of 'Git' section. -->
   <h3>Git</h3>
 
@@ -413,159 +426,8 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   </div>
 </div> <!-- End of 'Git' section. -->
 
-<div> <!-- Start of 'Python' section. -->
-  <h3>Python</h3>
 
-  <p>
-    <a href="http://python.org">Python</a> is a popular language for
-    scientific computing, and great for general-purpose programming as
-    well.  Installing all of its scientific packages individually can be
-    a bit difficult, so we recommend an all-in-one installer.
-  </p>
 
-  <div class="row-fluid">
-    <div class="span4">
-      <h4>Windows</h4>
-      <ul>
-	<li>
-          Download and
-          install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
-	</li>
-	<li>
-          Use all of the defaults for installation
-          <em>except</em> make sure to check <strong>Make Anaconda the
-            default Python</strong>.
-	</li>
-      </ul>
-    </div>
-    <div class="span4">
-      <h4>Mac OS X</h4>
-      <ul>
-	<li>
-          Download and
-          install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
-	</li>
-	<li>
-          Use all of the defaults for installation
-          <em>except</em>
-          make sure to check <strong>Make Anaconda the default Python</strong>.
-	</li>
-      </ul>
-    </div>
-    <div class="span4">
-      <h4>Linux</h4>
-      <p>
-	We recommend the all-in-one scientific Python installer
-	<a href="http://continuum.io/downloads.html">Anaconda</a>.
-	(Installation requires using the shell and if you aren't
-	comfortable doing the installation yourself just
-	download the installer and we'll help you at the boot
-	camp.)
-      </p>
-      <ol>
-	<li>
-          Download the installer that matches your operating
-          system and save it in your home folder.
-	</li>
-	<li>
-          Open a terminal window.
-	</li>
-	<li>
-          Type <pre>bash Anaconda-</pre> and then press
-          tab. The name of the file you just downloaded should
-          appear.
-	</li>
-	<li>
-          Press enter. You will follow the text-only prompts.  When
-          there is a colon at the bottom of the screen press the down
-          arrow to move down through the text. Type <code>yes</code> and
-          press enter to approve the license. Press enter to approve the
-          default location for the files. Type <code>yes</code> and
-          press enter to prepend Anaconda to your <code>PATH</code>
-          (this makes the Anaconda distribution the default Python).
-	</li>
-      </ol>
-    </div>
-  </div>
-</div> <!-- End of 'Python' section. -->
-
-<div> <!-- Start of 'R' section. -->
-  <h3>R</h3>
-
-  <p>
-    <a href="http://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="http://www.rstudio.com/">RStudio</a>.
-  </p>
-
-  <div class="row-fluid">
-    <div class="span4">
-      <h4>Windows</h4>
-      <p>
-	Install R by downloading and running
-	<a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-	Also, please install the
-	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Mac OS X</h4>
-      <p>
-	Install R by downloading and running
-	<a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-	Also, please install the
-	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Linux</h4>
-      <p>
-	You can download the binary files for your distribution
-	from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
-	you can use your package manager (e.g. for Debian/Ubuntu
-	run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo yum install R</code>).  Also, please install the
-	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'R' section. -->
-
-<div> <!-- Start of 'SQLite' section. -->
-  <h3>SQLite</h3>
-
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <div class="row-fluid">
-    <div class="span4">
-      <h4>Windows</h4>
-      <p>
-	Download the <a href="{{site.swc_files}}/sqlite3.exe">sqlite3
-	  program</a> and put it in the directory where you are running
-	examples.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Mac OS X</h4>
-      <p>
-	<code>sqlite3</code> comes pre-installed on Mac OS X.
-      </p>
-    </div>
-    <div class="span4">
-      <h4>Linux</h4>
-      <p>
-	<code>sqlite3</code> comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'SQLite' section. -->
 
 <!--
   Uncomment this section if you are using our virtual machine.
