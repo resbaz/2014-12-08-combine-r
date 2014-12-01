@@ -265,19 +265,49 @@ etherpad: https://etherpad.mozilla.org/2014-12-08-combine-r
 -->
 
 <h2 id="setup">Setup</h2>
+<h3>Wifi</h3>
 
 <p>
-  Prior to the workshop, University of Melbourne staff/students should ensure that their laptop can connect
-  to UniWireless. Instructions on how to do this and where to get assistance can be found 
+  Prior to the workshop, University of Melbourne staff/students should ensure that their 
+  laptop can connect to UniWireless. Instructions on how to do this and where to get 
+  assistance can be found 
   <a href="https://its.unimelb.edu.au/help/networks-access/networks-internet/connect-wireless/unimelb">here</a>.
-  Attendees from other Australian universities should find out (from the IT website of 
+  Attendees from other Australian universities should find out (from the IT website of
   their home institution) how to connect to the Eduroam wireless network.
 </p>
+
 <p>
   Since the bootcamp will be conducted on the NeCTAR Research Cloud, participants are not required to
   install any software prior to the bootcamp. For those people who'd like to install
   the software used in the bootcamp on their own machine for use after the bootcamp, we've included the 
   relevant installation instructions below (and we're happy to provide assistance with this during the bootcamp). 
+</p>
+
+<h3>Create a DIT4C Account</h3>
+<p>
+  During the week prior to the workshop, one of the instructors will email you the 
+  compute node name and access code you'll need for the Data Intensive Tools for 
+  the Cloud (DIT4C) environment that is hosted on the NeCTAR Research Cloud. Once you've 
+  got that name and code, navigate to 
+  the <a href="http://dit4c.metadata.net">DIT4C homepage</a> and follow these instructions:
+  <ol>
+    <li>Click the "login" button and proceed to login. You can use your institution 
+    username and password if you're at an Australian university, otherwise use your 
+    GitHub credentials (everyone creates a GitHub account during the Git lessons anyway, 
+    so you'll just be getting in early).</li>
+    <li>Go to the "compute nodes" tab and click "claim compute node access".</li>
+    <li>From the drop down menu, select the name of the compute node that the instructor 
+    emailed to you and enter the corresponding access code.</li>
+    <li>Go to the "containers" tab and add a new container named after yourself 
+    (e.g. johnsmith). The reason for this is that container names are unique (i.e. you can't 
+    have the same container name as anyone else in the room). Select an "RStudio" image 
+    from the drop down menu and then hit the create button.</li>
+    <li>When the container is "on", its name should turn blue and you can click on it to 
+    launch your environment in a new tab of your browser.</li>
+    <li>Once you're finished for the day, simply close all the extra tabs that have opened up 
+    and turn your container "off". When you come back tomorrow, simply switch back to the 'on' 
+    position to continue using that container.</li>
+</ol>
 </p>
 
 <h2 id="optional">Optional Software Installation</h2>
