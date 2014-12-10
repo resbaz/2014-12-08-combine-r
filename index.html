@@ -1,0 +1,542 @@
+---
+layout: workshop
+root: .
+venue: University of Melbourne 
+address: Theatre 2, Alan Gilbert
+country: Australia
+latlng: -37.800138,144.959285
+humandate: Dec 8-9, 2014
+humantime: 9:00 am - 5:00 pm
+startdate: 2014-12-08
+enddate: 2014-12-09
+instructor: ["Scott Ritchie", "Damien Irving"]
+helper: ["Andrew Lonsdale", "Harriet Dashnow", "Timothy Rice", "Noel Faux", "Simon Gladman", "Pip Griffin", "Alistair Walsh"] 
+contact: scottcr@unimelb.edu.au
+etherpad: https://etherpad.mozilla.org/2014-12-08-combine-r
+---
+<!--
+  Edit the values in the block above to be appropriate for your
+  workshop.  Run 'tools/check' *before* committing to make sure that
+  changes are good.
+-->
+
+<!--
+  This block includes the Eventbrite registration widget if
+  'eventbrite' has been set in the header.  You can delete it if you
+  are not using Eventbrite, or leave it in, since it will not be
+  displayed if the 'eventbrite' field in the header is not set.
+-->
+{% if page.eventbrite %}
+<iframe
+  src="//www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
+  frameborder="0"
+  pwidth="100%"
+  height="206px"
+  scrolling="auto">
+</iframe>
+{% endif %}
+
+<h2>General Information</h2>
+
+<!--
+  Edit the general explanatory paragraph below if you want to change
+  the pitch.
+-->
+<p>
+  Researchers spend much of their time wrestling with software, but most
+  are self-taught programmers. As a result, they spend hours doing things that
+  should take minutes, reinvent a lot of wheels, and still don't know if their
+  results are reliable. To tackle this problem, an international volunteer organisation
+  known as <a href="{{site.swc_site}}">Software Carpentry</a> has been
+  running <a href="{{site.swc_site}}/workshops/">workshops</a> for a number 
+  of years now, teaching basic lab skills for computing like program design, version 
+  control, data management and task automation. Participants will be encouraged to
+  help one another and to apply what they have learned to their own
+  research problems.
+</p>
+
+<p>
+  With support from the
+  <a href="https://its.unimelb.edu.au/research">ITS Research Services</a> department at 
+  The University of Melbourne, the 
+  <a href="http://resbaz.tumblr.com/about">Research Bazaar</a> project has
+  been running and supporting Software Carpentry bootcamps around Australia since 2013.
+  For this particular workshop we are teaming up with
+  <a href="http://combine.org.au/">COMBINE</a>, the national student
+  group for students and early career researchers in bioinformatics and
+  computational biology, although there are places available for researchers who aren't 
+  members of COMBINE.
+</p>
+
+<!--
+  Explain who your audience is.  (In particular, tell readers if the
+  workshop is only open to people from a particular institution.
+-->
+<p>
+  <strong>Who:</strong>
+  This workshop is open to postgraduate students, post-docs and other researchers who have a basic  
+  familiarity with programming concepts like variables and tabular data, but want to learn how to
+  use R, and learn the basic practices in scientific computing to help them work more productively.
+  While the workshop is being hosted at the University of Melbourne in conjunction with
+  COMBINE, people from other research institutions and disciplines are welcome. 
+</p>
+
+<!--
+  This block displays the address and links to maps showing directions
+  if the latitude and longitude of the workshop have been set.  You
+  can use http://itouchmap.com/latlong.html to find the lat/long of an
+  address.
+-->
+{% if page.latlng %}
+<p>
+  <strong>Where:</strong>
+  Theatre 2, <a href="http://maps.unimelb.edu.au/parkville/building/104">Alan Gilbert Building</a>,
+  University of Melbourne.
+</p>
+{% endif %}
+
+<!--
+  Modify the block below if there are any special requirements.
+-->
+<p>
+  <strong>Requirements:</strong>
+  Participants are asked to bring their laptop. They will be given access to
+  the <a href="http://dit4c.net/">Data Intensive Tools for the Cloud</a>
+  (DIT4C) environment on the
+  <a href="http://its.unimelb.edu.au/research/our_services/cloud_computing/research_cloud">NeCTAR Research Cloud</a>,
+  so it's critical that this laptop is able to connect to either the UniWireless
+  or Eduroam wifi networks (see wifi and DIT4C login instructions <a href="#setup">below</a>).
+  The DIT4C environment has all the required software installed, however there are software
+  installation instructions <a href="#software_install">below</a> for participants who would like to
+  install the software on their own laptop. Also note that participants are required to
+  abide by Software Carpentry's
+  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+</p>
+
+<!--
+  Display the contact email address set in the header.  If an address
+  isn't set in the header, the Software Carpentry admin address is
+  used.
+-->
+<p>
+  <strong>Contact</strong>:
+  Please mail
+  {% if page.contact %}
+    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+  {% else %}
+    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+  {% endif %}
+  for more information.
+</p>
+
+<hr/>
+
+<!--
+  Show the workshop's schedule.  Edit the items and times in the table
+  to match your plans.  You may also want to change 'Day 1' and 'Day
+  2' to be actual dates or days of the week.
+-->
+<h2>Schedule</h2>
+
+<div class="row-fluid">
+  <div class="span6">
+    <h3>Monday December 8th</h3>
+    <table class="table table-striped">
+      <tr> <td>09:00 - 10:15</td>  <td>Introduction to R + RStudio</td> </tr>
+      <tr> <td>10:15 - 10:45</td>  <td><em>Tea &amp; Coffee (not provided)</em></td> </tr>
+      <tr> <td>10:45 - 12:00</td>  <td>Functions</td> </tr>
+      <tr> <td>12:00 - 12:30</td>  <td>Project Setup</td> </tr>
+      <tr> <td>12:30 - 13:30</td>  <td><em>Lunch break (not provided)</em></td> </tr>
+      <tr> <td>13:30 - 14:00</td>  <td>Control flow (Conditional Statements)</td> </tr>
+      <tr> <td>14:00 - 15:00</td>  <td>Control flow (loops)</td> </tr>
+      <tr> <td>15:00 - 15:30</td>  <td><em>Tea &amp; Coffee (not provided)</em></td> </tr>
+      <tr> <td>15:30 - 16:30</td>  <td>Split-apply-combine</td> </tr>
+      <tr> <td>16:30 - 17:00</td>  <td>Wrap-up</td> </tr>
+    </table>
+  </div>
+  <div class="span6">
+    <h3>Tuesday December 9th</h3>
+    <table class="table table-striped">
+      <tr> <td>09:00 - 10:30</td>  <td>Introduction to Shell</td> </tr>
+      <tr> <td>10:15 - 10:45</td>  <td><em>Tea &amp; Coffee (not provided)</em></td> </tr>
+      <tr> <td>12:30 - 13:30</td>  <td><em>Lunch break (not provided)</em></td> </tr>
+      <tr> <td>13:30 - 15:00</td>  <td>Introduction to Git and Version Control</td> </tr>
+      <tr> <td>15:00 - 15:30</td>  <td><em>Tea &amp; Coffee (not provided)</em></td> </tr>
+      <tr> <td>16:30 - 17:00</td>  <td>Wrap-up</td> </tr>
+    </table>
+  </div>
+</div>
+
+<!--
+  Display the Etherpad for the workshop.  You will probably set this
+  up on the first day, so make sure you push changes to GitHub after
+  you have its URL.  To create an Etherpad, go to
+
+      http://etherpad.mozilla.org/YYYY-MM-DD-site
+
+  where 'YYYY-MM-DD-site' is the identifier for your workshop (e.g.,
+  '2015-06-10-esu'.
+-->
+{% if page.etherpad %}
+<p>
+  <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
+  <br/>
+  We will use this Etherpad for chatting, taking notes, and sharing URLs and bits of code.
+</p>
+{% endif %}
+
+<hr/>
+
+<!--
+  Show what topics will be covered.
+  1. If your workshop is R rather than Python, remove the comment
+     around that section and put a comment around the Python section.
+  2. Some workshops will delete SQL.
+  3. Please make sure the list of topics is synchronized with what you
+     intend to teach.
+  4. You may need to move the div's with class="span6" around inside
+     the div's with class="row-fluid" to balance the multi-column layout.
+  This is one of the places where people frequently make mistakes, so
+  please preview your site before committing, and make sure to run
+  'tools/check' as well.
+-->
+
+<h2>Syllabus</h2>
+
+<div class="row-fluid">
+  <div class="span6">
+    <h3>Programming in R</h3>
+    <ul>
+      <li>Introduction to R and R Studio</li>
+      <li>Working with vectors and data frames</li>
+      <li>Subsetting data</li>
+      <li>Vectorisation</li>
+      <li>Creating and using functions</li>
+      <li>Organising projects</li>
+      <li>Conditionals</li>
+      <li>Repeating tasks</li>
+      <li>Unit Testing your code</li>
+      <li><a href="{{site.swc_lessons}}/ref/06-R.html">Reference card...</a></li>
+      <li><a href="https://resbaz.github.io/2014-r-materials/lessons/index.html">Lesson notes...</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span6">
+    <h3>The Unix Shell</h3>
+    <ul>
+      <li>Files and directories</li>
+      <li>History and tab completion</li>
+      <li>Pipes and redirection</li>
+      <li>Looping over files</li>
+      <li>Creating and running shell scripts</li>
+      <li>Finding things</li>
+      <li><a href="{{site.swc_lessons}}/ref/01-shell.html">Reference card...</a></li>
+      <li><a href="{{site.swc_lessons}}/shell/index.html">Lesson notes...</a></li>
+    </ul>
+  </div> 
+  <div class="span6">
+    <h3>Version Control with Git</h3>
+    <ul>
+      <li>Creating a repository</li>
+      <li>Recording changes to files: <code>add</code>, <code>commit</code>, ...</li>
+      <li>Viewing changes: <code>status</code>, <code>diff</code>, ...</li>
+      <li>Ignoring files</li>
+      <li>Working on the web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
+      <li>Resolving conflicts</li>
+      <li>Open licenses</li>
+      <li>Where to host work, and why</li>
+      <li><a href="{{site.swc_lessons}}/ref/02-git.html">Reference card...</a></li>
+      <li><a href="{{site.swc_lessons}}/git/index.html">Lesson notes...</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!--
+  Delete irrelevant sections from the setup instructions.  Each
+  section is inside a 'div' without any classes to make the beginning
+  and end easier to find.
+
+  This is the other place where people frequently make mistakes, so
+  please preview your site before committing, and make sure to run
+  'tools/check' as well.
+-->
+
+<h2 id="setup">Setup</h2>
+<h3>Wifi</h3>
+
+<p>
+  Prior to the workshop, University of Melbourne staff/students should ensure that their 
+  laptop can connect to UniWireless. Instructions on how to do this and where to get 
+  assistance can be found 
+  <a href="https://its.unimelb.edu.au/help/networks-access/networks-internet/connect-wireless/unimelb">here</a>.
+  Attendees from other Australian universities should find out (from the IT website of
+  their home institution) how to connect to the Eduroam wireless network.
+</p>
+
+<p>
+  Since the bootcamp will be conducted on the NeCTAR Research Cloud, participants are not required to
+  install any software prior to the bootcamp. For those people who'd like to install
+  the software used in the bootcamp on their own machine for use after the bootcamp, we've included the 
+  relevant installation instructions below (and we're happy to provide assistance with this during the bootcamp). 
+</p>
+
+<h3>Create a DIT4C Account</h3>
+<p>
+  During the week prior to the workshop, one of the instructors will email you the 
+  compute node name and access code you'll need for the Data Intensive Tools for 
+  the Cloud (DIT4C) environment that is hosted on the NeCTAR Research Cloud. Once you've 
+  got that name and code, navigate to 
+  the <a href="http://dit4c.net/">DIT4C homepage</a> and follow these instructions:
+  <ol>
+    <li>Click the "login" button and proceed to login using your 
+    <a href="http://github.com/">GitHub</a> credentials (a GitHub account is required during the Git lessons, so go ahead
+    and get yourself a free GitHub account if you don't have one already).</li>
+    <li>Go to the "compute nodes" tab and click "claim compute node access".</li>
+    <li>From the drop down menu, select the name of the compute node that the instructor 
+    emailed to you and enter the corresponding access code.</li>
+    <li>Go to the "containers" tab and add a new container named after yourself 
+    (e.g. johnsmith). The reason for this is that container names are unique (i.e. you can't 
+    have the same container name as anyone else in the room). Select an "RStudio" image 
+    from the drop down menu and then hit the create button.</li>
+    <li>When the container is "on", its name should turn blue and you can click on it to 
+    launch your environment in a new tab of your browser.</li>
+    <li>Once you're finished for the day, simply close all the extra tabs that have opened up 
+    and turn your container "off". When you come back tomorrow, simply switch back to the 'on' 
+    position to continue using that container.</li>
+</ol>
+</p>
+
+<h2 id="optional">Optional Software Installation</h2>
+<p>
+  At the end of the bootcamp you may wish to install the software covered 
+  on your laptop or on your lab machine later. We've included an overview of
+  the software as well as installation instructions below.
+</p>
+<hr />
+<div> <!-- Start of 'R' section. -->
+  <h3>R</h3>
+
+  <p>
+    <a href="http://www.r-project.org">R</a> is a programming language
+    that is especially powerful for data exploration, visualization, and
+    statistical analysis. To interact with R, we use
+    <a href="http://www.rstudio.com/">RStudio</a>.
+  </p>
+
+  <div class="row-fluid">
+    <div class="span4">
+      <h4>Windows</h4>
+      <p>
+	Install R by downloading and running
+	<a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
+	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
+	Also, please install the
+	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+      </p>
+    </div>
+    <div class="span4">
+      <h4>Mac OS X</h4>
+      <p>
+	Install R by downloading and running
+	<a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
+	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
+	Also, please install the
+	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+      </p>
+    </div>
+    <div class="span4">
+      <h4>Linux</h4>
+      <p>
+	You can download the binary files for your distribution
+	from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
+	you can use your package manager (e.g. for Debian/Ubuntu
+	run <code>sudo apt-get install r-base</code> and for Fedora run
+        <code>sudo yum install R</code>).  Also, please install the
+	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+      </p>
+    </div>
+  </div>
+</div> <!-- End of 'R' section. -->
+<hr />
+<div> <!-- Start of 'shell' section. -->
+  <h3>The Bash Shell</h3>
+
+  <p>
+    Bash is a commonly-used shell that gives you the power to do simple
+    tasks more quickly.
+  </p>
+
+  <div class="row-fluid">
+    <div class="span4">
+      <h4>Windows</h4>
+      <p>
+	Install Git for Windows by download and running
+	<a href="http://msysgit.github.io/">the installer</a>.
+	This will provide you with both Git and Bash in the Git Bash program.
+      </p>
+      <h4>Software Carpentry Installer</h4>
+      <p><em>This installer requires an active internet connection.</em></p>
+      <p>After installing Python and Git Bash:</p>
+      <ul>
+	<li>
+          Download the <a href="{{site.swc_installer}}">installer</a>.
+	</li>
+	<li>
+          If the file opens directly in the browser
+          select <strong>File&rarr;Save Page As</strong> to download it
+          to your computer.
+	</li>
+	<li>
+          Double click on the file to run it.
+	</li>
+      </ul>
+    </div>
+    <div class="span4">
+      <h4>Mac OS X</h4>
+      <p>
+	The default shell in all versions of Mac OS X is bash, so no
+	need to install anything.  You access bash from the Terminal
+	(found in
+	<code>/Applications/Utilities</code>).  You may want to keep
+	Terminal in your dock for this workshop.
+      </p>
+    </div>
+    <div class="span4">
+      <h4>Linux</h4>
+      <p>
+	The default shell is usually <code>bash</code>, but if your
+	machine is set up differently you can run it by opening a
+	terminal and typing <code>bash</code>.  There is no need to
+	install anything.
+      </p>
+    </div>
+  </div>
+<div> <!-- End of 'shell' section. -->  
+  <hr />
+<div> <!-- Start of 'editor' section. -->
+  <h3>Text Editor</h3>
+
+  <p>
+    When you're writing code, it's nice to have a text editor that is
+    optimized for writing code, with features like automatic
+    color-coding of key words.  The default text editor on Mac OS X and
+    Linux is usually set to Vim, which is not famous for being
+    intuitive.  if you accidentally find yourself stuck in it, try
+    typing the escape key, followed by ':q!' (colon, lower-case 'q',
+    exclamation mark), then hitting Return to return to the shell.
+  </p>
+
+  <div class="row-fluid">
+    <div class="span4">
+      <h4>Windows</h4>
+      <p>
+	<code>nano</code> is the editor installed by the Software
+	Carpentry Installer, it is a basic editor integrated into the
+	lesson material.
+      </p>
+      <p>
+	<a href="http://notepad-plus-plus.org/">Notepad++</a> is a
+	popular free code editor for Windows.  Be aware that you must
+	add its installation directory to your system path in order to
+	launch it from the command line (or have other tools like Git
+	launch it for you).  Please ask your instructor to help you do
+	this.
+      </p>
+    </div>
+    <div class="span4">
+      <h4>Mac OS X</h4>
+      <p>
+	We recommend
+	<a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
+	<a href="http://www.sublimetext.com/">Sublime Text</a>.
+	In a pinch, you can use <code>nano</code>,
+	which should be pre-installed.
+      </p>
+    </div>
+    <div class="span4">
+      <h4>Linux</h4>
+      <p>
+	<a href="http://kate-editor.org/">Kate</a> is one option for
+	Linux users.  In a pinch, you can use <code>nano</code>, which
+	should be pre-installed.
+      </p>
+    </div>
+  </div>
+</div> <!-- End of 'editor' section. -->
+<hr />
+<div> <!-- Start of 'Git' section. -->
+  <h3>Git</h3>
+
+  <p>
+    Git is a version control system that lets you track who made changes
+    to what when and has options for easily updating a shared or public
+    version of your code
+    on <a href="https://github.com/">github.com</a>.
+  </p>
+
+  <div class="row-fluid">
+    <div class="span4">
+      <h4>Windows</h4>
+      <p>
+	Git should be installed on your computer as part of your Bash
+	install (described above).
+      </p>
+    </div>
+    <div class="span4">
+      <h4>Mac OS X</h4>
+      <p>
+	<strong>For OS X 10.8 and higher</strong>, install Git for Mac
+	by downloading and running
+	<a href="http://git-scm.com/downloads">the installer</a>.
+	<strong>For older versions of OS X (10.5-10.7)</strong> use the
+	most recent available installer for your
+	OS <a href="https://code.google.com/p/git-osx-installer/downloads/list">available
+	  here</a>.  Use the Leopard installer for 10.5 and the Snow
+	Leopard installer for 10.6-10.7.
+      </p>
+    </div>
+    <div class="span4">
+      <h4>Linux</h4>
+      <p>
+	If Git is not already available on your machine you can try to
+	install it via your distro's package manager. For Debian/Ubuntu run
+        <code>sudo apt-get install git</code> and for Fedora run
+        <code>sudo yum install git</code>.
+      </p>
+    </div>
+  </div>
+</div> <!-- End of 'Git' section. -->
+
+
+
+
+<!--
+  Uncomment this section if you are using our virtual machine.
+
+<div>
+  <h3>Virtual Machine</h3>
+
+  <p>
+    Some instructors prefer to have learners use a virtual machine (VM)
+    rather than install software on their own computers.  If your
+    instructors have chosen to do this, please:
+  </p>
+  <ol>
+    <li>
+      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
+    </li>
+    <li>
+      Download our <a href="{{site.swc_vm_url}}">VM image</a>.
+      <strong>Warning:</strong> this file is 1.7 GByte, so please
+      download it <em>before</em> coming to your workshop.
+    </li>
+    <li>
+      Load the VM into VirtualBox by selecting "Import Appliance" and
+      loading the <code>.ova</code> file.
+    </li>
+  </ol>
+</div>
+-->
